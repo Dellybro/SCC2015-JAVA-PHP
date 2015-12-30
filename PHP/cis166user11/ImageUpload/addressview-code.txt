@@ -1,0 +1,29 @@
+<?php
+$host = "mysql.galast.com";
+$dbname = "galast_user11";
+$username = "galast_user11";
+$password = "cisPW2015";
+$conn = new PDO("mysql:host=$host;dbname=$dbname",$username, $password);
+
+$sql = "SELECT * FROM userdb";
+$table = "";	
+$table .= "<table border='1'>";
+foreach($conn->query($sql) as $row){
+	$table .= "<tr><td>" . $row["fname"] . "</td>";
+	$table .= "<td>" . $row["lname"] . "</td>";
+	$table .= "<td>" . $row["email"] . "</td>";
+	$table .= "<td>" . $row["phone"] . "</td>";
+	$table .= "<td>" . $row["gender"] . "</td>";
+	$table .= "<td>" . $row["permission"] . "</td>";
+	$table .= "<td>" . $row["lastedit"] . "</td>";
+	$table .= "<td>" . $row["created"] . "</td></tr>";
+}
+$table .= "</table>";
+?>
+<html>
+
+<html>
+<body>
+<?php echo $table; ?>
+</body>
+</html>

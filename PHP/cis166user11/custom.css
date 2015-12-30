@@ -1,0 +1,28 @@
+body {
+    background-color: #d0e4fe;
+}
+
+.navBar{
+	width: 100%;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: orange; 
+}
+.navBar > li {
+	display:inline-block;
+}
+.navBar li > h1{
+	padding-left:120;
+
+}
+.navBar li > a{
+	display: inline-block;
+	font-size: 20;
+	padding: 10;
+}
+
+.Center-Class{
+	text-align: center;
+}
